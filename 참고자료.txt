@@ -1,0 +1,2 @@
+HTML entities
+- HTML 예약어를 표시할 때 사용한다.
