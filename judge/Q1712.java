@@ -15,7 +15,7 @@ public class Q1712 {
 		
 		
 		try {
-			
+			// 2100000000
 			String[] tmp = br.readLine().split(" ");
 			int A = Integer.parseInt(tmp[0]);		// 고정지출
 			int B = Integer.parseInt(tmp[1]);		// 가변지출
@@ -24,18 +24,20 @@ public class Q1712 {
 			
 			int i=0;
 			while(true) {
-				if(B>C) {		// 가변지출이 한대당 가격보다 큰 경우
+				if(B>=C) {		// 가변지출이 한대당 가격보다 큰 경우
 					System.out.println(-1);
 					break;
 				}
 				i++;
-				if(A+ i*B < C*i) {
+				// A+ B*i < C*i
+				// A+(B-C)*i < 0
+				if( A/i + B < C) {
 					System.out.println(i);
 					break;
 				}
 				
 			}
-			
+			// System.out.println(Integer.MAX_VALUE);
 			
 			
 			bw.flush();
